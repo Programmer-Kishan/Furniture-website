@@ -1,0 +1,485 @@
+/* 
+#E26A2C
+#FF8243
+#FDA65D
+#FFD07F
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Poppins&family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.light {
+    --lighest: #FFD07F;
+    --medlight: #FDA65D;
+    --highmed: #FF8243;
+    --high: #E26A2C;
+}
+
+@keyframes show {
+
+    0% {
+        display: block;
+        top: -100%;
+    }
+
+    100% {
+        display: block;
+        top: 0;
+    }
+
+}
+
+/* @keyframes hide {
+
+    0% {
+
+    }
+
+} */
+
+.showNavbar {
+    display: block;
+    animation: show 2s ease-in-out 0.5s;
+    animation-fill-mode: forwards;
+}
+
+
+/* Navbar */
+
+.navbar {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #421600;
+    color: var(--lighest);
+    font-family: 'Poppins', sans-serif;
+    /* z-index: 0; */
+}
+
+
+/** hamburgur bar **/
+
+
+.hamburger-btn  {
+    background-color: #fff;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    border: 10px solid var(--highmed);
+    cursor: pointer;
+    padding: 16px;
+    display: none;
+}
+
+
+.bar {
+    margin: 20px;
+    width: 20px;
+    position: relative;
+    height: 2.5px;
+    background-color: #000;
+    right: 29px;
+    top: -16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.bar::before, .bar::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    background-color: #000;
+}
+
+.bar::after {
+    bottom: 10px;
+}
+
+.brand {
+    font-size: 2rem;
+    margin-left: 24px;
+}
+
+.brand span {
+    margin-left: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    text-shadow: 1.5px 1.5px #000;
+}
+
+.options {
+    width: 45%;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.5rem;
+}
+
+.list li a {
+    text-decoration: none;
+    /* color: #000; */
+    color: var(--lighest);
+    text-shadow: 1px 1px #000;
+    transition: 0.4s ease;
+}
+
+.social-icons {
+    font-size: 1.3rem;
+    margin-right: 30px;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.social-icons i {
+    cursor: pointer;
+    transition: 0.7s ease;
+}
+
+.list li a:hover, .social-icons i:hover {
+    text-shadow: 1px 1px 6px #fff;
+    transform: scale(1.2);
+}
+
+/* Home Section */
+
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #421600;
+    color: var(--lighest);
+    padding: 10% 4%;
+}
+
+.content { 
+    padding: 0 4%;
+    margin-bottom: 10px;
+}
+
+.sub-heading {
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+
+.heading {
+    font-size: 4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+.text {
+    margin-top: 25px;
+    font-size: 1.3rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.btn {
+    margin-top: 30px;
+    padding: 15px;
+    width: 120px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    background-color: var(--highmed);
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 1px 1px 7px #612101;
+}
+
+.image {
+    position: relative;
+}
+
+#chair-image {
+    position: relative;
+}
+
+.box-1, .box-2{
+    position: absolute;
+    width: 18.75rem;
+    height: 18.75rem;
+    border-radius: 100%;
+    opacity: 0.4;
+}
+
+.box-1 {
+    background-color: var(--high);
+    left: 10%;
+}
+
+.box-2 {
+    background-color: var(--highmed);
+    top: 24%;
+    left: 45%;
+}
+
+/* About Us Section */
+
+#about {
+    padding: 4%;
+    text-align: center;
+    background-color: var(--lighest);
+}
+
+#about .heading{
+    margin: 0 0 3rem;
+    color: #421600;
+}
+
+.about-div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-div-child {
+    padding: 2%;
+    background-color: var(--high);
+    width: 27vw;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 15px;
+    color: var(--lighest);
+    position: relative;
+}
+
+.about-div-child::before {
+    content: "";
+    background-color: #ffd07f9f;
+    color: var(--high);
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-radius: 15px;
+    /* box-shadow: 1px 3px 5px #000;
+    transform: scale(1.1); */
+    transition: all 0.5s ease-in-out;
+}
+
+.about-div-child:hover::before {
+    width: 100%;
+    height: 100%;
+    box-shadow: 1px 3px 5px #000;
+}
+
+.about-div-child i {
+    font-size: 3rem;
+}
+
+.description {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+}
+
+.description h3 {
+    font-family: 'Poppins', sans-serif;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.4s ease-in-out 0.1s;
+}
+
+.description hr {
+    outline: none;
+    border-style: none none dotted;
+    border-width: 9px;
+    width: 40%;
+    margin: 1.5rem auto;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.4s ease-in-out 0.1s;
+}
+
+.description p {
+    font-family: 'Ubuntu', sans-serif;
+    width: 80%;
+    margin: 0 auto 2rem;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.4s ease-in-out 0.1s;
+}
+
+.description a {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.4s ease-in-out 0.1s;
+}
+
+.about-div-child:hover .description h3{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.about-div-child:hover .description hr{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.about-div-child:hover .description p{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.about-div-child:hover .description a{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#review {
+    padding: 50px;
+    background-color: var(--high);
+    color: var(--medlight);
+}
+
+#review h1{
+    text-align: center;
+}
+
+#review .btn {
+    width: 55px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.btn-l {
+    top: 12rem;
+}
+
+.btn-r {
+    bottom: 15.9rem;
+    left: 85rem;
+}
+
+.carosal {
+    text-align: center;
+}
+
+.carosal-desc {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.carosal-desc img {
+    border: 1px solid #000;
+    width: 10%;
+    border-radius: 50%;
+}
+
+
+@media only screen and (max-width: 1200px) {
+
+    .navbar {
+        display: flex;
+        width: 100%;
+        color: var(--lighest);
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: linear-gradient(to right, #ff8243bd, #f9b57ddf);
+        top: -100%;
+        z-index: 10;
+        transition: 0.5s ease;
+    }
+
+    .hamburger-btn {
+        display: block;
+        z-index: 1000;
+    }
+
+    .navbar.active {
+        /* text-align: center;
+        animation: show 2s ease-in-out 0.5s;
+        animation-fill-mode: forwards; */
+        top: 0;
+    }
+
+    .hamburger-btn.active .bar {
+        transform: translateY(-5px) rotate(45deg);
+    }
+
+    .hamburger-btn.active .bar::before {
+        opacity: 0;
+    }
+
+    .hamburger-btn.active .bar::after {
+        transform: translateY(9px) rotate(-90deg);
+    }
+
+    .list {
+        margin: 4% 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .list li {
+        margin: 5% 0;
+    }
+
+    .list li a {
+        color: var(--lighest);
+    }
+
+    .social-icons {
+        text-align: center;
+        margin: 0;
+    }
+
+    .social-icons i {
+        margin: 0 3rem;
+    }
+    
+    #home {
+        display: block;
+        padding: 10% 4% 4%;
+    }
+
+    .content, .image {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn {
+        margin: 2rem 0;
+    }
+}
+
+@media only screen and (max-width: 1090px) {
+    .about-div-child {
+        width: 80vw;
+        margin: 0 0 3rem;
+    }
+}
